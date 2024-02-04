@@ -1,0 +1,27 @@
+
+[package]
+name = "rust-azure-table-queue"
+version = "0.2.0"
+edition = "2021"
+
+[lib]
+name = "queuemsg"
+path = "src/queuemsg/lib.rs"
+
+[[bin]]
+name = "reqtest"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base64 = "0.21.7"
+chrono = "0.4.33"
+futures = "0.3.30"
+hmac = "0.12.1"
+reqwest = { version = "0.11.24", features = ["json"] }
+serde = { version = "1.0.196", features = ["derive"] }
+serde_json = "1.0.113"
+sha2 = "0.10.8"
+tokio = { version = "1.36.0", features = ["full"] }
+
